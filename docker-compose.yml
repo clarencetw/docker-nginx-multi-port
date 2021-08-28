@@ -1,0 +1,15 @@
+version: "3"
+services:
+  nginx:
+    build: .
+    container_name: nginx
+    ports:
+      - "8080:80"
+      - "8000:8000"
+      - "8001:8001"
+
+  nodejs-web-server:
+    image: clarencetw/nodejs-web-server
+    container_name: nodejs-web-server
+    ports:
+      - "3000:3000"
